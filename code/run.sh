@@ -1,0 +1,16 @@
+python train.py --gpu_id 0 --source ant-1.5  --target ant-1.6 --loss_name RTN --tradeoff 1.0 --using_bottleneck 1 --task WPDP
+python train.py --gpu_id 0 --source ant-1.6  --target ant-1.7 --loss_name RTN --tradeoff 1.0 --using_bottleneck 1 --task WPDP
+python train.py --gpu_id 0 --source camel-1.2  --target camel-1.4 --loss_name RTN --tradeoff 1.0 --using_bottleneck 1 --task WPDP
+python train.py --gpu_id 0 --source camel-1.4 --target camel-1.6 --loss_name RTN --tradeoff 1.0 --using_bottleneck 1 --task WPDP
+python train.py --gpu_id 0 --source jedit-3.2.1 --target jedit-4.0 --loss_name RTN --tradeoff 1.0 --using_bottleneck 1 --task WPDP
+python train.py --gpu_id 0 --source jedit-4.0 --target jedit-4.1 --loss_name RTN --tradeoff 1.0 --using_bottleneck 1 --task WPDP
+python train.py --gpu_id 0 --source lucene-2.0  --target lucene-2.2 --loss_name RTN --tradeoff 1.0 --using_bottleneck 1 --task WPDP
+python train.py --gpu_id 0 --source lucene-2.2 --target lucene-2.4 --loss_name RTN --tradeoff 1.0 --using_bottleneck 1 --task WPDP
+python train.py --gpu_id 0 --source xerces-1.2 --target xerces-1.3 --loss_name RTN --tradeoff 1.0 --using_bottleneck 1 --task WPDP
+python train.py --gpu_id 0 --source xalan-2.4 --target xalan-2.5 --loss_name RTN --tradeoff 1.0 --using_bottleneck 1 --task WPDP
+python train.py --gpu_id 0 --source log4j-1.0  --target log4j-1.1 --loss_name RTN --tradeoff 1.0 --using_bottleneck 1 --task WPDP
+python train.py --gpu_id 0 --source ivy-1.4 --target ivy-2.0 --loss_name RTN --tradeoff 1.0 --using_bottleneck 1 --task WPDP
+python train.py --gpu_id 0 --source synapse-1.0 --target synapse-1.1 --loss_name RTN --tradeoff 1.0 --using_bottleneck 1 --task WPDP
+python train.py --gpu_id 0 --source poi-1.5  --target poi-2.5.1 --loss_name RTN --tradeoff 1.0 --using_bottleneck 1 --task WPDP
+python train.py --gpu_id 0 --source poi-2.5.1 --target poi-3.0 --loss_name RTN --tradeoff 1.0 --using_bottleneck 1 --task WPDP
+python train.py --gpu_id 0 --source synapse-1.1 --target synapse-1.2 --loss_name RTN --tradeoff 1.0 --using_bottleneck 1 --task WPDP
