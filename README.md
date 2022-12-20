@@ -19,7 +19,3 @@ python train.py
 **4. Batch training
 
 sh run.sh
-
-Contacts
-=================
-If any issues, please feel free to contact the author.
