@@ -71,6 +71,10 @@ Batch training
 sh run.sh
 ```
 
+Experimental reslut
+===============
+- ` In the `./temp/reslut/`.`
+
 Supplementary Note
 ===============
 
