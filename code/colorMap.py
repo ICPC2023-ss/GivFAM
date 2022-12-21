@@ -4,7 +4,7 @@ import numpy as np
 import cv2
 import os
 import binascii
-
+import math
 
 def get_FileSize(filePath):
     fsize = os.path.getsize(filePath)
@@ -39,8 +39,6 @@ def get_new_color_img(filename):
     hexst = binascii.hexlify(content)
     fh = np.array([int(hexst[i:i + 2], 16) for i in range(0, len(hexst), 2)])
 
-
-    import math
     x = len(fh)
     x_width = math.sqrt(x)
     x_width = math.ceil(x_width)
