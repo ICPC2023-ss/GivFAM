@@ -4,7 +4,7 @@ Code grayscale image visualization for software defect prediction with fusion at
 We proposed a novel GivFAM approach, which simultaneously considers code visualization comprehension and fusion attention mechanism to extract the code feature for software defect prediction.
 
 
-Prepare for Dataset
+Prepare for dataset
 =================
 - `Put the source code of the experiment project in folder ./data/archives. Available via github or other websites.`
 - `Generate the code images corresponding to the java files. Please run makeTxt.py and codeVis.py sequentially.`
