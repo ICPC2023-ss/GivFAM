@@ -15,7 +15,7 @@ is carried out with the GivFAM-based feature.
 Prepare for Dataset
 =================
 - ` Download Java files from PROMISE database.`
-- ` Generate code images, run `makeTxt.py` and `codeVis.py`.`
+- ` Generate code images, run ![makeTxt.py](https://github.com/ICPC2023-ss/GivFAM/edit/main/README.md) and `codeVis.py`.`
 - ` Data storage format should be like:`
 
 ```
