@@ -15,16 +15,19 @@ is carried out with the GivFAM-based feature.
 Build running environment
 =================
 
-**1. Prepare for dateset. 
+Prepare for dataset
+=================
+
+Train and test
+=================
 
 **2. install accimage (support Windows, Linux and MacOS). 
 
 pip insatll acc-image
 
-**3. Train and test
-
 python train.py
 
-**4. Batch training
+Batch training
+===============
 
 sh run.sh
