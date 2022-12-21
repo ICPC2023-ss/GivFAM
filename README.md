@@ -14,9 +14,9 @@ is carried out with the GivFAM-based feature.
 
 Build running environment (windows)
 =================
-'''
+```
 pip install -r requirements.txt
-'''
+```
 
 Prepare for dataset
 =================
