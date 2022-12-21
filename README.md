@@ -15,7 +15,7 @@ is carried out with the GivFAM-based feature.
 Prepare for Dataset
 =================
 - ` Download Java files from PROMISE database.`
-- ` Generate code images, run ![makeTxt.py](https://github.com/ICPC2023-ss/GivFAM/edit/main/README.md) and `codeVis.py`.`
+- ` Generate code images, run makeTxt.py and codeVis.py.`
 - ` Data storage format should be like:`
 
 ```
@@ -57,7 +57,7 @@ https://blog.csdn.net/weixin_43856668/article/details/119146989
 
 Train and test
 =================
-- ` To run and test network, simply run `train.py`.`
+- ` To run and test network, simply run train.py.`
 ```
 python train.py
 ```
@@ -65,7 +65,7 @@ python train.py
 Batch Training
 ===============
 
-- ` Modified the `run.sh`.`
+- ` Modified the run.sh.`
 
 ```
 sh run.sh
@@ -73,7 +73,7 @@ sh run.sh
 
 Experimental Result
 ===============
-- ` In the `./temp/result/`.`
+- ` In the ./temp/result/.`
 
 Supplementary Note
 ===============
