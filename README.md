@@ -15,29 +15,35 @@ is carried out with the GivFAM-based feature.
 Prepare for dataset
 =================
 - ` Download Java files from PROMISE database.`
+- ` Run makeTxt.py.`
 
 Build running environment (windows)
 =================
 - ` Install required packages.`
+
 ```
 pip install -r requirements.txt
 ```
-- ` Install accimage.`
-- ` Official installation link：` https://github.com/pytorch/accimage
+
+- ` Install accimage (support Windows, Linux and MacOS).`
+- ` Official installation link:`https://github.com/pytorch/accimage
+
 ```
 $ conda install -c conda-forge accimage
 ```
-If you have problems, solutions can be found in this link：https://blog.csdn.net/weixin_43856668/article/details/119146989
+
+- ` If you have problems, solutions can be found in this link:`https://blog.csdn.net/weixin_43856668/article/details/119146989
 
 Train and test
 =================
 
-**2. install accimage (support Windows, Linux and MacOS). 
 ```
 python train.py
 ```
+
 Batch training
 ===============
+
 ```
 sh run.sh
 ```
