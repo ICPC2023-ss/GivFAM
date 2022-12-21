@@ -12,7 +12,7 @@ extraction method and introduce fusion attention learning
 of spatial and channel attention weights. Defect prediction
 is carried out with the GivFAM-based feature.
 
-Prepare for dataset
+Prepare for Dataset
 =================
 - ` Download Java files from PROMISE database.`
 - ` Generate code images, run `makeTxt.py` and `codeVis.py`.`
@@ -34,7 +34,7 @@ Prepare for dataset
   -txt
 ```
 
-Build running environment (windows)
+Build Running Environment (windows)
 =================
 - ` Install required packages.`
 
@@ -62,7 +62,7 @@ Train and test
 python train.py
 ```
 
-Batch training
+Batch Training
 ===============
 
 - ` Modified the `run.sh`.`
@@ -71,7 +71,7 @@ Batch training
 sh run.sh
 ```
 
-Experimental result
+Experimental Result
 ===============
 - ` In the `./temp/result/`.`
 
