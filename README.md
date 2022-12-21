@@ -34,9 +34,7 @@ pip install -r requirements.txt
 ```
 
 - ` Install accimage (support Windows, Linux and macOS).`
-- ` Official installation link:`
-
-https://github.com/pytorch/accimage
+Official installation link: https://github.com/pytorch/accimage
 
 ```
 $ conda install -c conda-forge accimage
