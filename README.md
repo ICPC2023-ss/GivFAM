@@ -1,40 +1,31 @@
 # GivFAM
 Code grayscale image visualization for software defect prediction with fusion attention mechanism (GivFAM).
 
-In this paper, we proposed a novel GivFAM approach, which
-simultaneously considers code visualization comprehension
-and fusion attention mechanism to extract the code feature. In
-software visualization, we improve the code image generation
-mechanism, avoiding the information loss caused by element
-mixing and image cropping. In fusion attention learning,
-we improve the deep neural network structure and feature
-extraction method and introduce fusion attention learning
-of spatial and channel attention weights. Defect prediction
-is carried out with the GivFAM-based feature.
+We proposed a novel GivFAM approach, which simultaneously considers code visualization comprehension and fusion attention mechanism to extract the code feature for software defect prediction.
 
 Prepare for Dataset
 =================
-- ` Download Java files from PROMISE database.`
-- ` Generate code images, run makeTxt.py and codeVis.py.`
-- ` Data storage format should be like:`
+- ` Put the source code of the experiment software in folder ./data/archives. Available via github: https://github.com or other websites.`
+- ` Generate the code images corresponding to the java files. Please run makeTxt.py and codeVis.py sequentially.`
+- ` The path structure of the prepared data images is as follows:`
 
 ```
 -data
   -archives
   -csvs
   -img
-    -Java project 1
-      -file 1
-      -file 2
+    - Project 1
+      -file 1.png
+      -file 2.png
       ...
-    -Java project 2
-      -file 1
-      -file 2
+    - Project 2
+      -file 1.png
+      -file 2.png
       ...
   -txt
 ```
 
-Build Running Environment (windows)
+Build Running Environment
 =================
 - ` Install required packages.`
 
@@ -51,29 +42,25 @@ https://github.com/pytorch/accimage
 $ conda install -c conda-forge accimage
 ```
 
-- ` If you have problems, solutions can be found in this link:`
-
-https://blog.csdn.net/weixin_43856668/article/details/119146989
-
 Train and test
 =================
-- ` To run and test network, simply run train.py.`
+- ` To train and test, simply run train.py.`
 ```
 python train.py
 ```
 
-Batch Training
+Config Batch Training
 ===============
 
-- ` Modified the run.sh.`
+- ` Modify and execute the run.sh.`
 
 ```
 sh run.sh
 ```
 
-Experimental Result
+Check Experimental Result
 ===============
-- ` In the ./temp/result/.`
+- ` Please check the folder ./temp/result/.`
 
 Supplementary Note
 ===============
