@@ -8,7 +8,7 @@ software visualization, we improve the code image generation
 mechanism, avoiding the information loss caused by element
 mixing and image cropping. In fusion attention learning,
 we improve the deep neural network structure and feature
-extraction method and introduce a fusion attention learning
+extraction method and introduce fusion attention learning
 of spatial and channel attention weights. Defect prediction
 is carried out with the GivFAM-based feature.
 
@@ -16,7 +16,7 @@ Prepare for dataset
 =================
 - ` Download Java files from PROMISE database.`
 - ` Generate code images, run `makeTxt.py` and `codeVis.py`.`
-- ` Data storage format shoud be like:`
+- ` Data storage format should be like:`
 
 ```
 -data
@@ -42,7 +42,7 @@ Build running environment (windows)
 pip install -r requirements.txt
 ```
 
-- ` Install accimage (support Windows, Linux and MacOS).`
+- ` Install accimage (support Windows, Linux and macOS).`
 - ` Official installation link:`
 
 https://github.com/pytorch/accimage
@@ -57,7 +57,7 @@ https://blog.csdn.net/weixin_43856668/article/details/119146989
 
 Train and test
 =================
-- ` To run and test network,simply run `train.py`.`
+- ` To run and test network, simply run `train.py`.`
 ```
 python train.py
 ```
@@ -71,9 +71,9 @@ Batch training
 sh run.sh
 ```
 
-Experimental reslut
+Experimental result
 ===============
-- ` In the `./temp/reslut/`.`
+- ` In the `./temp/result/`.`
 
 Supplementary Note
 ===============
