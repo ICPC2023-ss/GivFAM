@@ -395,7 +395,7 @@ if __name__ == "__main__":
     os.environ["CUDA_VISIBLE_DEVICES"] = args.gpu_id
 
     config = {}
-    config["num_iterations"] = 2000
+    config["num_iterations"] = 500
     config["test_interval"] = 1
     config["prep"] = [{"name": "source", "type": "image", "test_10crop": False, "resize_size": 227, "crop_size": 227},
                       {"name": "target", "type": "image", "test_10crop": False, "resize_size": 227, "crop_size": 227}]
