@@ -1,1 +1,1 @@
-Some additional results generated in the project are placed in this folder.
+Results generated in the project are placed in this folder.
