@@ -15,7 +15,48 @@ is carried out with the GivFAM-based feature.
 Prepare for dataset
 =================
 - ` Download Java files from PROMISE database.`
-- ` Run makeTxt.py.`
+- ` Generate code images, run `makeTxt.py` and `codeVis.py`.`
+- ` Data storage format shoud be like:`
+
+```
+-data
+  -archives
+    -Java project 1
+      -file 1
+      -file 2
+      ...
+    -Java project 2
+      -file 1
+      -file 2
+      ...
+  -csvs
+    -Java project 1
+      -file 1
+      -file 2
+      ...
+    -Java project 2
+      -file 1
+      -file 2
+      ...
+  -img
+    -Java project 1
+      -file 1
+      -file 2
+      ...
+    -Java project 2
+      -file 1
+      -file 2
+      ...
+  -txt
+    -Java project 1
+      -file 1
+      -file 2
+      ...
+    -Java project 2
+      -file 1
+      -file 2
+      ...
+```
 
 Build running environment (windows)
 =================
