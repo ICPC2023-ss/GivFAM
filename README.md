@@ -57,7 +57,7 @@ https://blog.csdn.net/weixin_43856668/article/details/119146989
 
 Train and test
 =================
-
+- ` To run and test network,simply run `train.py`.`
 ```
 python train.py
 ```
@@ -65,7 +65,7 @@ python train.py
 Batch training
 ===============
 
-- ` Modified the run.sh.`
+- ` Modified the `run.sh`.`
 
 ```
 sh run.sh
