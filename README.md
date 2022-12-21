@@ -23,7 +23,7 @@ Build running environment (windows)
 pip install -r requirements.txt
 ```
 - ` Install accimage.`
-- ` Official installation link：https://github.com/pytorch/accimage`
+- ` Official installation link：` https://github.com/pytorch/accimage
 ```
 $ conda install -c conda-forge accimage
 ```
