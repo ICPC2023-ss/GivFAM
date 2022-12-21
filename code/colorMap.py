@@ -11,7 +11,7 @@ def get_FileSize(filePath):
     size = fsize/float(1024)
     return round(size,2)
 
-# 改变图片颜色
+# change images color
 def get_new_color_img(filename):
     size = get_FileSize(filename)
     n = 1
