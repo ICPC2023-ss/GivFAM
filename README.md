@@ -12,6 +12,10 @@ extraction method and introduce a fusion attention learning
 of spatial and channel attention weights. Defect prediction
 is carried out with the GivFAM-based feature.
 
+Prepare for dataset
+=================
+1.Download Java files from PROMISE database.
+
 Build running environment (windows)
 =================
 1. install required packages
@@ -19,13 +23,11 @@ Build running environment (windows)
 pip install -r requirements.txt
 ```
 2. install accimage
+Official installation link：https://github.com/pytorch/accimage
 ```
-pip insatll acc-image
+$ conda install -c conda-forge accimage
 ```
-Detailed steps can be found in this link：https://blog.csdn.net/weixin_43856668/article/details/119146989
-
-Prepare for dataset
-=================
+If you have problems, solutions can be found in this link：https://blog.csdn.net/weixin_43856668/article/details/119146989
 
 Train and test
 =================
