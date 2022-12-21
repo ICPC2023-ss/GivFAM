@@ -14,9 +14,15 @@ is carried out with the GivFAM-based feature.
 
 Build running environment (windows)
 =================
+1. install required packages
 ```
 pip install -r requirements.txt
 ```
+2. install accimage
+```
+pip insatll acc-image
+```
+Detailed steps can be found in this link：https://blog.csdn.net/weixin_43856668/article/details/119146989
 
 Prepare for dataset
 =================
@@ -25,12 +31,11 @@ Train and test
 =================
 
 **2. install accimage (support Windows, Linux and MacOS). 
-
-pip insatll acc-image
-
+```
 python train.py
-
+```
 Batch training
 ===============
-
+```
 sh run.sh
+```
