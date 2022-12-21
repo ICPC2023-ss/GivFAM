@@ -54,7 +54,7 @@ if __name__ == '__main__':
         if txtfile == 'readme.md':
             continue
 
-        # 生成图片所存放的路径，buggy和clean分开放
+        # images save path, distinguish buggy and clean
         project_name = txtfile.split('.txt')[0]
         path_img = img_path + project_name + color_path
 
