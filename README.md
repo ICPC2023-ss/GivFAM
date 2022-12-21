@@ -61,6 +61,8 @@ python train.py
 Batch training
 ===============
 
+- ` Modified the run.sh.`
+
 ```
 sh run.sh
 ```
@@ -69,6 +71,8 @@ Supplementary Note
 ===============
 
 - ` Our code is mainly extended from the code of the DTL-DP[1] paper. Here is the link:`https://zenodo.org/record/3373409#.XV0Oy5Mza35.
+
+
 [1]Chen J, Hu K, Yu Y, et al. Software visualization and deep transfer learning for effective software defect prediction[C]//Proceedings of the ACM/IEEE 42nd international conference on software engineering. 2020: 578-589.
 
 Contacts
