@@ -14,16 +14,16 @@ is carried out with the GivFAM-based feature.
 
 Prepare for dataset
 =================
-1.Download Java files from PROMISE database.
+- ` Download Java files from PROMISE database.`
 
 Build running environment (windows)
 =================
-1. install required packages
+- ` Install required packages.`
 ```
 pip install -r requirements.txt
 ```
-2. install accimage
-Official installation link：https://github.com/pytorch/accimage
+- ` Install accimage.`
+- ` Official installation link：https://github.com/pytorch/accimage`
 ```
 $ conda install -c conda-forge accimage
 ```
