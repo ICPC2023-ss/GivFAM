@@ -1,7 +1,16 @@
 # GivFAM
 Code grayscale image visualization for software defect prediction with fusion attention mechanism (GivFAM).
 
-GivFAM aims to utilize visualization technics to improve the software defect prediction performance. By converting the source code into code images, GivFAM can be effective and robust predicting software defects.
+In this paper, we proposed a novel GivFAM approach, which
+simultaneously considers code visualization comprehension
+and fusion attention mechanism to extract the code feature. In
+software visualization, we improve the code image generation
+mechanism, avoiding the information loss caused by element
+mixing and image cropping. In fusion attention learning,
+we improve the deep neural network structure and feature
+extraction method and introduce a fusion attention learning
+of spatial and channel attention weights. Defect prediction
+is carried out with the GivFAM-based feature.
 
 Build running environment
 =================
