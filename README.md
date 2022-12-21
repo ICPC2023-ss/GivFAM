@@ -12,8 +12,11 @@ extraction method and introduce a fusion attention learning
 of spatial and channel attention weights. Defect prediction
 is carried out with the GivFAM-based feature.
 
-Build running environment(windows)
+Build running environment (windows)
 =================
+'''
+pip install -r requirements.txt
+'''
 
 Prepare for dataset
 =================
