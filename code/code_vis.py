@@ -2,7 +2,7 @@ import numpy
 import os,shutil
 import binascii
 from random import *
-import colorMap
+import color_map
 import cv2
 import time
 
@@ -79,7 +79,7 @@ if __name__ == '__main__':
                 size = get_FileSize(f_path)
                 if size == 0:
                     break
-                im = colorMap.get_new_color_img(f_path)
+                im = color_map.get_new_color_img(f_path)
                 buggy_or_clean = '/clean/_'
                 if label == '1':
                     buggy_or_clean = '/buggy/_'
