@@ -9,12 +9,7 @@ import time
 rs = Random()
 
 img_path = '../data/img/'
-# color_path = '/bgr_img'
-# color_path = '/rbg_img'
-# color_path = '/rgb_img'
-# color_path = '/brg_img'
-# color_path = '/gbr_img'
-color_path = '/grb_img'
+color_path = '/gray_img'
 
 
 def getMatrixfrom_bin(filename, width = 512, oneRow = False):

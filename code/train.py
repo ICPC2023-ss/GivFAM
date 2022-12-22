@@ -186,10 +186,6 @@ def transfer_classification(config):
 
     ## set loss
     class_criterion = nn.CrossEntropyLoss()
-    loss_config = config["loss"]
-    transfer_criterion = loss.loss_dict[loss_config["name"]]
-    if "params" not in loss_config:
-        loss_config["params"] = {}
 
     ## prepare data
     dsets = {}
@@ -278,11 +274,6 @@ def transfer_classification(config):
         parameter_list = [{"params": base_network.parameters(), "lr": 10},
                           {"params": classifier_layer.parameters(), "lr": 10}]
 
-    ## add additional network for some methods
-    if loss_config["name"] == "JAN":
-        softmax_layer = nn.Softmax()
-        if use_gpu:
-            softmax_layer = softmax_layer.cuda()
 
     ## set optimizer
     optimizer_config = config["optimizer"]
@@ -314,7 +305,7 @@ def transfer_classification(config):
                                           test_10crop=prep_dict["target"]["test_10crop"], gpu=use_gpu)
 
         print(args.source + '->' + args.target)
-        print('F-measure: ', F)
+        print(F)
         F_array.append(F)
 
         if F_best < F:
@@ -349,25 +340,11 @@ def transfer_classification(config):
         if net_config["use_bottleneck"]:
             features = bottleneck_layer(features)
         outputs = classifier_layer(features)
-        length = int(inputs.size(0) / 2)  # Modified by Kevin
+        length = int(inputs.size(0) / 2)
         classifier_loss = class_criterion(outputs.narrow(0, 0, length), labels_source)
 
-        ## switch between different transfer loss
-        if loss_config["name"] == "DAN":
-            transfer_loss = transfer_criterion(features.narrow(0, 0, int(features.size(0)/2)),
-                                               features.narrow(0, int(features.size(0)/2), int(features.size(0)/2)),
-                                               **loss_config["params"])
-        elif loss_config["name"] == "RTN":
-            ## RTN is still under developing
-            transfer_loss = 0
-        elif loss_config["name"] == "JAN":
-            softmax_out = softmax_layer(outputs)
-            transfer_loss = transfer_criterion(
-                [features.narrow(0, 0, int(features.size(0)/2)), softmax_out.narrow(0, 0, int(softmax_out.size(0)/2))],
-                [features.narrow(0, int(features.size(0)/2), int(features.size(0)/2)),
-                 softmax_out.narrow(0, int(softmax_out.size(0)/2), int(softmax_out.size(0)/2))], **loss_config["params"])
-        total_loss = 1.0 * transfer_loss + classifier_loss
-        end_train = time.perf_counter()
+        total_loss = classifier_loss
+
 
         total_loss.backward()
         optimizer.step()
@@ -381,16 +358,14 @@ def transfer_classification(config):
 
 if __name__ == "__main__":
     path = '../data/img/'
-    target_channel = '/grb_img'
+    target_channel = '/gray_img'
 
-    parser = argparse.ArgumentParser(description='Transfer Learning')
+    parser = argparse.ArgumentParser(description='')
     parser.add_argument('--gpu_id', type=str, nargs='?', default='0', help="device id to run")
-    parser.add_argument('--source', type=str, nargs='?', default='xalan-2.4', help="source data")
-    parser.add_argument('--target', type=str, nargs='?', default='xalan-2.5', help="target data")
-    parser.add_argument('--loss_name', type=str, nargs='?', default='RTN', help="loss name")
+    parser.add_argument('--source', type=str, nargs='?', default='poi-1.5', help="source data")
+    parser.add_argument('--target', type=str, nargs='?', default='poi-2.5.1', help="target data")
     parser.add_argument('--tradeoff', type=float, nargs='?', default=1.0, help="tradeoff")
     parser.add_argument('--using_bottleneck', type=int, nargs='?', default=1, help="whether to use bottleneck")
-    parser.add_argument('--task', type=str, nargs='?', default='WPDP', help="WPDP or CPDP")
     args = parser.parse_args()
     os.environ["CUDA_VISIBLE_DEVICES"] = args.gpu_id
 
@@ -399,8 +374,7 @@ if __name__ == "__main__":
     config["test_interval"] = 1
     config["prep"] = [{"name": "source", "type": "image", "test_10crop": False, "resize_size": 227, "crop_size": 227},
                       {"name": "target", "type": "image", "test_10crop": False, "resize_size": 227, "crop_size": 227}]
-    config["loss"] = {"name": args.loss_name, "trade_off": args.tradeoff}
-    #
+
     config["data"] = [{"name": "source", "type": "image", "list_path": {
         "train": path + args.source + "/instances.txt"},
                        "batch_size": {"train": 32, "test": 32}},
