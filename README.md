@@ -7,7 +7,7 @@ We proposed a novel GivFAM approach, which simultaneously considers code visuali
 Prepare for dataset
 =================
 - `Put the source code of the experiment project in folder ./data/archives. Available via github or other websites.`
-- `Generate the code images corresponding to the java files. Please run makeTxt.py and codeVis.py sequentially.`
+- `Generate the code images corresponding to the java files. Please run makeTxt.py, codeVis.py, and makeInstanceTxt.py sequentially.`
 - `The path structure of the prepared data images is as follows:`
 
 ```
